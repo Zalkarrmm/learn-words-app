@@ -1,0 +1,56 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.root{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    .conti{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .signOutBtn{
+            padding: 10px 15px;
+            border-radius: 5px;
+            border: .5px solid rgb(255, 255, 255);
+            color: white;
+            background-color: rgb(255, 136, 0);
+            outline: none;
+            position: fixed;
+            top: 2%;
+            right: 2%;
+            cursor: pointer;
+            &:hover{
+                background-color: rgb(255, 0, 0);
+            }
+        }
+    } 
+    .contiBtn{
+        padding: 10px;
+        background-color:rgb(255, 38, 0);
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        border: .3px solid grey;
+        &:hover{
+            background-color:red ;
+        }
+    }
+    .cards{
+        margin: 1rem ;
+        width: 70%;
+        background-color: rgba(128, 128, 128, 0.349);
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .AddCard{
+        width: 100%;
+        height: auto;
+    }
+}

@@ -1,0 +1,84 @@
+.container{
+    display: flex;
+    
+
+    .root{
+        // margin: 1rem 0;
+        // width: 200px;
+        border: 1px solid rgba(0, 0, 0, 0);
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        border-radius: 5px;
+        position: relative;
+        margin: 1rem;
+        .front , .back{
+            overflow: hidden;
+            cursor: pointer;
+            padding: 10px 5px;
+            backface-visibility: hidden;
+            transition: .6s;
+            width: 100px ;
+            height: 20px;
+            text-transform: capitalize;
+            background-color: #fff;
+            border: .2px solid rgb(51, 192, 51);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            &:hover{
+                background-color: rgb(151, 252, 120);
+                border: 0.2px solid grey;
+            }
+        }
+        .front{
+            // margin: 10px 0;
+            width: 100px;
+            height: 30px;
+            transform: perspective(600px) rotateY(0deg);
+            
+        }
+        .back{
+            position: absolute;
+            left: 0px;
+            top: 0px ;
+            padding: 16px 0px;
+            transform: perspective(600px) rotateY(180deg);
+        }
+    }
+    .isRemembered{
+        .front{
+            transform: perspective(600px) rotateY(-180deg);
+        }
+        
+        .back{
+            background-color: rgb(51, 192, 51);
+            border: .2px solid white;
+            color: white;
+            position: absolute;
+            text-decoration: line-through;
+            transform: perspective(600px) rotateY(0deg);
+        }
+    }
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .deleteIcon{
+        color: red;
+        cursor: pointer;
+        &:hover{
+            color: rgb(168, 0, 0);
+        }
+    }
+    .editIcon{
+        cursor: pointer;
+        color: green;
+        &:hover{
+            color: rgb(9, 170, 9);
+        }
+    }
+}
